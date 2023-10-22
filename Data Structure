@@ -1,0 +1,1245 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Nama    : Hilal Bintang Sabili", 
+    "NIM     : J0403231119,
+    "Materi  : Data Structure"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "NIM     : J0403231156"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Kelas   : B-1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Basic List Operations"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "len([1, 2, 3])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 4, 5, 6]"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "[1, 2, 3] + [4, 5, 6]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['Hi!', 'Hi!', 'Hi!', 'Hi!']"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "['Hi!']*4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "3 in [1, 2, 3]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n"
+     ]
+    }
+   ],
+   "source": [
+    "for x in [1, 2, 3]:\n",
+    "    print (x),"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Examples of using Built-in Methods"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 3, 5, 6]\n",
+      "[1, 2, 3, 4, 3, 5, 6, 7, 8, 9]\n",
+      "[1, 2, 10, 3, 4, 3, 5, 6, 7, 8, 9]\n",
+      "[1, 2, 10, 4, 3, 5, 6, 7, 8, 9]\n",
+      "Popped element: 10\n",
+      "[]\n",
+      "Index of 3: 2\n",
+      "Count of 3: 2\n",
+      "[1, 2, 3, 3, 4, 5]\n",
+      "[5, 4, 3, 3, 2, 1]\n",
+      "[5, 4, 3, 3, 2, 1]\n",
+      "Length of the list: 6\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Initialize a sample list\n",
+    "my_list = [1, 2, 3, 4, 3, 5]\n",
+    "\n",
+    "# append(x) - Adds an element to the end of the list\n",
+    "my_list.append(6)\n",
+    "print(my_list)  # Output: [1, 2, 3, 4, 3, 5, 6]\n",
+    "\n",
+    "# extend(iterable) - Extends the list with elements from another iterable\n",
+    "my_list.extend([7, 8, 9])\n",
+    "print(my_list)  # Output: [1, 2, 3, 4, 3, 5, 6, 7, 8, 9]\n",
+    "\n",
+    "# insert(i, x) - Inserts an element at a specified index\n",
+    "my_list.insert(2, 10)\n",
+    "print(my_list)  # Output: [1, 2, 10, 3, 4, 3, 5, 6, 7, 8, 9]\n",
+    "\n",
+    "# remove(x) - Removes the first occurrence of an element\n",
+    "my_list.remove(3)\n",
+    "print(my_list)  # Output: [1, 2, 10, 4, 3, 5, 6, 7, 8, 9]\n",
+    "\n",
+    "# pop([i]) - Removes and returns an element (default: last element)\n",
+    "popped_element = my_list.pop(2)\n",
+    "print(f\"Popped element: {popped_element}\")  # Output: Popped element: 10\n",
+    "# clear() - Removes all elements from the list\n",
+    "my_list.clear()\n",
+    "print(my_list)  # Output: []\n",
+    "\n",
+    "# index(x[, start[, end]]) - Returns the index of the first occurrence of an element\n",
+    "my_list = [1, 2, 3, 4, 3, 5]\n",
+    "index = my_list.index(3)\n",
+    "print(f\"Index of 3: {index}\")  # Output: Index of 3: 2\n",
+    "\n",
+    "# count(x) - Returns the number of occurrences of an element\n",
+    "count = my_list.count(3)\n",
+    "print(f\"Count of 3: {count}\")  # Output: Count of 3: 2\n",
+    "\n",
+    "# sort(key=None, reverse=False) - Sorts the list in ascending order\n",
+    "my_list.sort()\n",
+    "print(my_list)  # Output: [1, 2, 3, 3, 4, 5]\n",
+    "\n",
+    "# reverse() - Reverses the order of elements\n",
+    "my_list.reverse()\n",
+    "print(my_list)  # Output: [5, 4, 3, 3, 2, 1]\n",
+    "\n",
+    "# copy() - Creates a shallow copy of the list\n",
+    "copy_of_list = my_list.copy()\n",
+    "print(copy_of_list)  # Output: [5, 4, 3, 3, 2, 1]\n",
+    "\n",
+    "# len(list) - Returns the number of elements in the list\n",
+    "length = len(my_list)\n",
+    "print(f\"Length of the list: {length}\")  # Output: Length of the list: 6\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Creating Python lists"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The type of [] is: <class 'list'>\n",
+      "The type of [1, 2.4, 'abc', (1, 2), [6, 78, 9]] is: <class 'list'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1=[] \n",
+    "list2=[1,2.4,'abc',(1,2),[6,78,9]] \n",
+    "print(\"The type of\",list1,\"is:\",type(list1))\n",
+    "print(\"The type of\",list2,\"is:\",type(list2))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Accessing an element from the Python list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "a\n",
+      "[1, 3, 5.6, 'a', 'PythonGeeks', 0.4]\n",
+      "PythonGeeks\n"
+     ]
+    }
+   ],
+   "source": [
+    "list_1=[1,3,5.6,'a',\"PythonGeeks\",0.4]\n",
+    "print(list_1[3]) # accessing the 4th element\n",
+    "print(list_1) # accessing the whole list\n",
+    "print(list_1[-2]) # printing the last 2nd element"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Slicing the list in Python"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "list_1[2:5] = [5.6, 'a', 'PythonGeeks']\n",
+      "list_1[:] = [1, 3, 5.6, 'a', 'PythonGeeks', 0.4]\n",
+      "list_1[-5:-2] = [3, 5.6, 'a']\n",
+      "list_1[3:] = ['a', 'PythonGeeks', 0.4]\n",
+      "list_1[-3:] = ['a', 'PythonGeeks', 0.4]\n",
+      "list_1[:2] = [1, 3]\n",
+      "list_1[:-2] = [1, 3, 5.6, 'a']\n"
+     ]
+    }
+   ],
+   "source": [
+    "list_1=[1,3,5.6,'a',\"PythonGeeks\",0.4]\n",
+    "print(\"list_1[2:5] =\",list_1[2:5])\n",
+    "print(\"list_1[:] =\",list_1[:]) \n",
+    "print(\"list_1[-5:-2] =\",list_1[-5:-2])\n",
+    "print(\"list_1[3:] =\",list_1[3:]) \n",
+    "print(\"list_1[-3:] =\",list_1[-3:])\n",
+    "print(\"list_1[:2] =\",list_1[:2]) \n",
+    "print(\"list_1[:-2] =\",list_1[:-2])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Modifying and deleting from Python List"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "After modifying using indexing: [1, 2, 10, 4, 5]\n",
+      "After modifying using slicing: [1, 20, 30, 40, 5]\n",
+      "After deleting using indexing: [1, 20, 40, 5]\n",
+      "After deleting using slicing: [1]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Create a list\n",
+    "my_list = [1, 2, 3, 4, 5]\n",
+    "\n",
+    "# Modify an element using indexing\n",
+    "my_list[2] = 10\n",
+    "print(\"After modifying using indexing:\", my_list)  # Output: [1, 2, 10, 4, 5]\n",
+    "\n",
+    "# Modify a range of elements using slicing\n",
+    "my_list[1:4] = [20, 30, 40]\n",
+    "print(\"After modifying using slicing:\", my_list)  # Output: [1, 20, 30, 40, 5]\n",
+    "\n",
+    "# Delete an element using indexing\n",
+    "del my_list[2]\n",
+    "print(\"After deleting using indexing:\", my_list)  # Output: [1, 20, 40, 5]\n",
+    "\n",
+    "# Delete a range of elements using slicing\n",
+    "my_list[1:4] = []\n",
+    "print(\"After deleting using slicing:\", my_list)  # Output: [1, 5]\n",
+    "\n",
+    "# Delete the entire list\n",
+    "del my_list\n",
+    "# Now, my_list is no longer defined"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Common Ways to Loop Through a List"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "Index 0: 1\n",
+      "Index 1: 2\n",
+      "Index 2: 3\n",
+      "Index 3: 4\n",
+      "Index 4: 5\n",
+      "5\n",
+      "4\n",
+      "3\n",
+      "2\n",
+      "1\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Create a sample list\n",
+    "my_list = [1, 2, 3, 4, 5]\n",
+    "\n",
+    "# Method 1: Loop through the list and print each element\n",
+    "for item in my_list:\n",
+    "    print(item)\n",
+    "\n",
+    "# Method 2: Loop through the list with index using enumerate()\n",
+    "for index, item in enumerate(my_list):\n",
+    "    print(f\"Index {index}: {item}\")\n",
+    "\n",
+    "# Method 3: Loop through the list in reverse order\n",
+    "for item in reversed(my_list):\n",
+    "    print(item)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "List Comprehension in Python"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 4, 9, 16, 25]\n",
+      "['apple', 'orange', 'cherry', 'kiwi', 'mango']\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Sample 1:\n",
+    "list1=[1,-2,3,-4,5]\n",
+    "list2=[x**2 for x in list1]\n",
+    "print(list2)\n",
+    "\n",
+    "# Sample 2 (with condition):\n",
+    "fruits = [\"apple\", \"banana\", \"cherry\", \"kiwi\", \"mango\"]\n",
+    "newlist = [x if x != \"banana\" else \"orange\" for x in fruits]\n",
+    "print(newlist)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Unpacking the List"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Python\n",
+      "5\n",
+      "Developer\n"
+     ]
+    }
+   ],
+   "source": [
+    "emp_info=['Python',5,'Developer']\n",
+    "\n",
+    "#List unpacking\n",
+    "skill,exp,role=emp_info\n",
+    "print (skill)\t#Output:Python\n",
+    "print (exp)\t#Output:5\n",
+    "print (role)\t#Output:Developer"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Using Lists as Stacks - Example"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "User clicked the back button. Navigating to: Contact Us\n",
+      "User clicked the back button. Navigating to: Blog\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Initialize an empty stack to represent the browser history\n",
+    "browser_history = []\n",
+    "\n",
+    "# Simulate user browsing by pushing visited pages onto the stack\n",
+    "browser_history.append(\"Homepage\")\n",
+    "browser_history.append(\"About Us\")\n",
+    "browser_history.append(\"Products\")\n",
+    "browser_history.append(\"Contact Us\")\n",
+    "\n",
+    "# User clicks the back button\n",
+    "if len(browser_history) > 0:\n",
+    "    current_page = browser_history.pop()\n",
+    "    print(\"User clicked the back button. Navigating to:\", current_page)\n",
+    "\n",
+    "# User continues browsing and adds more pages to the history\n",
+    "browser_history.append(\"FAQs\")\n",
+    "browser_history.append(\"Blog\")\n",
+    "\n",
+    "# User clicks the back button again\n",
+    "if len(browser_history) > 0:\n",
+    "    current_page = browser_history.pop()\n",
+    "    print(\"User clicked the back button. Navigating to:\", current_page)\n",
+    "\n",
+    "# At this point, the browser history would contain [\"Homepage\", \"About Us\", \"Products\", \"Contact Us\", \"FAQs\"]."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Using Lists as Queue - Example"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Queue before:\n",
+      "['Person 1', 'Person 2', 'Person 3']\n",
+      "\n",
+      "Elements dequeued from queue :  Person 1\n",
+      "\n",
+      "Queue after:\n",
+      "['Person 2', 'Person 3']\n"
+     ]
+    }
+   ],
+   "source": [
+    "queue = ['Person 1','Person 2'] \n",
+    "  \n",
+    "# Adding elements to the queue \n",
+    "queue.append('Person 3') \n",
+    "  \n",
+    "print(\"\\nQueue before:\") \n",
+    "print(queue) \n",
+    "  \n",
+    "# Removing elements from the queue \n",
+    "print(\"\\nElements dequeued from queue : \", queue.pop(0)) \n",
+    "  \n",
+    "print(\"\\nQueue after:\") \n",
+    "print(queue)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Built-in Methods of Tuples"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      "2\n",
+      "0\n"
+     ]
+    }
+   ],
+   "source": [
+    "tup=(9,6,'g','Python',7.4)\n",
+    "print(len(tup))\n",
+    "print(tup.index('g'))\n",
+    "\n",
+    "print(tup.count('a'))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Creating Tuples"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Tuple t1: (1, 2, 3, 4)\n",
+      "Tuple t2: (1, 2, 3, 4, 5)\n",
+      "Tuple t3: (1, 2, 3, 4, 5, 6)\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Create a tuple using round brackets\n",
+    "t1 = (1, 2, 3, 4)\n",
+    "\n",
+    "# Create a tuple from a list the tuple() constructor\n",
+    "t2 = tuple([1, 2, 3, 4, 5])\n",
+    "\n",
+    "# Create a tuple using the tuple() constructor\n",
+    "t3 = tuple([1, 2, 3, 4, 5, 6])\n",
+    "\n",
+    "# Print out tuples\n",
+    "print(f\"Tuple t1: {t1}\")\n",
+    "print(f\"Tuple t2: {t2}\")\n",
+    "print(f\"Tuple t3: {t3}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Accessing Values in Tuples"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "tup1[0]:  physics\n",
+      "tup2[1:5]:  (2, 3, 4, 5)\n"
+     ]
+    }
+   ],
+   "source": [
+    "tup1 = ('physics', 'chemistry', 1997, 2000);\n",
+    "tup2 = (1, 2, 3, 4, 5, 6, 7 );\n",
+    "print (\"tup1[0]: \", tup1[0])\n",
+    "print (\"tup2[1:5]: \", tup2[1:5])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Updating Tuples"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(12, 34.56, 'abc', 'xyz')\n"
+     ]
+    }
+   ],
+   "source": [
+    "tup1 = (12, 34.56);\n",
+    "tup2 = ('abc', 'xyz');\n",
+    "\n",
+    "# Following action is NOT VALID for tuples\n",
+    "# tup1[0] = 100;\n",
+    "\n",
+    "# So let's create a new tuple as follows\n",
+    "tup3 = tup1 + tup2;\n",
+    "print (tup3);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Delete Tuple Elements"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (2151437121.py, line 1)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;36m  Cell \u001b[1;32mIn[20], line 1\u001b[1;36m\u001b[0m\n\u001b[1;33m    tup = ('physics', 'chemistry', 1997, 2000):\u001b[0m\n\u001b[1;37m                                              ^\u001b[0m\n\u001b[1;31mSyntaxError\u001b[0m\u001b[1;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "tup = ('physics', 'chemistry', 1997, 2000):\n",
+    "print (tup):\n",
+    "del tup:\n",
+    "print (\"After deleting tup : \");\n",
+    "print (tup);\t# an exception raised, because after del tup tuple does not exist anymore"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Changing Python tuple value by using list()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(1, 2, 3, 4, 6)"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tup=(1,2,3,4,5)\n",
+    "\n",
+    "list1=list(tup)\n",
+    "list1[4]=6\n",
+    "\n",
+    "tup=tuple(list1)\n",
+    "tup"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Tuple Packing and Unpacking"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The type of  (1, 2, 3) is: <class 'tuple'>\n",
+      "1\n",
+      "2\n",
+      "3\n"
+     ]
+    }
+   ],
+   "source": [
+    "tup=1,2,3 #packing\n",
+    "print(\"The type of \",tup,\"is:\",type(tup))\n",
+    "\n",
+    "a,b,c=tup #unpacking\n",
+    "print(a)\n",
+    "print(b)\n",
+    "print(c)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Built-in Methods of Dictionaries - Example"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "o\n",
+      "dict_keys([1, 2, 3, 4, 5])\n",
+      "dict_values(['a', 'e', 'i', 'o', 'u'])\n",
+      "dict_items([(1, 'a'), (2, 'e'), (3, 'i'), (4, 'o'), (5, 'u')])\n",
+      "The value of var1 is: e\n",
+      "The value of var2 is: (5, 'u')\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "{}"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict1={1:'a',2:'e',3:'i',4:'o',5:'u'}\n",
+    "print(dict1.get(4))\n",
+    "\n",
+    "print(dict1.keys())\n",
+    "\n",
+    "print(dict1.values())\n",
+    "\n",
+    "print(dict1.items())\n",
+    "\n",
+    "var1=dict1.pop(2)\n",
+    "print(\"The value of var1 is:\",var1)\n",
+    "\n",
+    "var2=dict1.popitem()\n",
+    "print(\"The value of var2 is:\",var2)\n",
+    "\n",
+    "dict1.clear()\n",
+    "dict1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Accessing Values in Dictionary"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "dict['Name']:  Zara\n",
+      "dict['Age']:  7\n"
+     ]
+    }
+   ],
+   "source": [
+    "dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}\n",
+    "print (\"dict['Name']: \", dict['Name'])\n",
+    "print (\"dict['Age']: \", dict['Age'])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Updating Dictionary"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "dict['Age']:  8\n",
+      "dict['School']:  DPS School\n"
+     ]
+    }
+   ],
+   "source": [
+    "dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}\n",
+    "dict['Age'] = 8; # update existing entry\n",
+    "dict['School'] = \"DPS School\"; # Add new entry\n",
+    "\n",
+    "print (\"dict['Age']: \", dict['Age'])\n",
+    "print (\"dict['School']: \", dict['School'])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Delete Dictionary Elements"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "dict['Age']:  dict['Age']\n",
+      "dict['School']:  dict['School']\n"
+     ]
+    }
+   ],
+   "source": [
+    "dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}\n",
+    "del dict['Name']; # remove entry with key 'Name'\n",
+    "dict.clear();     # remove all entries in dict\n",
+    "del dict ;        # delete entire dictionary\t\n",
+    "\n",
+    "# an exception is raised here because after del dict dictionary does not exist any more :\n",
+    "print (\"dict['Age']: \", dict['Age'])\n",
+    "print (\"dict['School']: \", dict['School'])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Common Ways to Loop through a Dictionary"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "name -> Alice\n",
+      "age -> 25\n",
+      "city -> New York\n",
+      "name -> Alice\n",
+      "age -> 25\n",
+      "city -> New York\n",
+      "name -> Alice\n",
+      "age -> 25\n",
+      "city -> New York\n",
+      "Alice\n",
+      "25\n",
+      "New York\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Creating a sample dictionary\n",
+    "my_dict = {\"name\": \"Alice\", \"age\": 25, \"city\": \"New York\"}\n",
+    "\n",
+    "# Method 1: Loop through keys and access values\n",
+    "for key in my_dict:\n",
+    "    print(key, \"->\", my_dict[key])\n",
+    "\n",
+    "# Method 2: Loop through keys and values using .items()\n",
+    "for key, value in my_dict.items():\n",
+    "    print(key, \"->\", value)\n",
+    "\n",
+    "# Method 3: Loop through keys using .keys() (less common)\n",
+    "for key in my_dict.keys():\n",
+    "    print(key, \"->\", my_dict[key])\n",
+    "\n",
+    "# Method 4: Loop through values using .values()\n",
+    "for value in my_dict.values():\n",
+    "    print(value)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Properties of Dictionary Keys"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "dict['Name']:  Manni\n"
+     ]
+    }
+   ],
+   "source": [
+    "dict = {'Name': 'Zara', 'Age': 7, 'Name': 'Manni'}\n",
+    "print (\"dict['Name']: \", dict['Name'])\t# dict['Name']:  Manni"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Creating a Set"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Fri', 'Sat', 'Wed', 'Sun', 'Thu', 'Mon', 'Tue'}\n",
+      "{'Mar', 'Feb', 'Jan'}\n",
+      "{17, 21, 22}\n"
+     ]
+    }
+   ],
+   "source": [
+    "Days=set([\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\",\"Sun\"])\n",
+    "Months={\"Jan\",\"Feb\",\"Mar\"}\n",
+    "Dates={21,22,17}\n",
+    "print(Days)\n",
+    "print(Months)\n",
+    "print(Dates)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Accessing Values in a Set"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Fri\n",
+      "Sat\n",
+      "Wed\n",
+      "Sun\n",
+      "Thu\n",
+      "Mon\n",
+      "Tue\n"
+     ]
+    }
+   ],
+   "source": [
+    "Days=set([\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\",\"Sun\"])\n",
+    " \n",
+    "for d in Days:\n",
+    "   print(d)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Adding & Removing Items to a Set"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Fri', 'Sat', 'Wed', 'Sun', 'Thu', 'Mon', 'Tue'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "Days=set([\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"])\n",
+    " \n",
+    "Days.add(\"Sun\")\n",
+    "print(Days)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Fri', 'Sat', 'Wed', 'Thu', 'Mon', 'Tue'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "Days=set([\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"])\n",
+    " \n",
+    "Days.discard(\"Sun\")\n",
+    "print(Days)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Union, Intersection, and Difference of Sets"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Fri', 'Sat', 'Wed', 'Sun', 'Thu', 'Mon', 'Tue'}\n",
+      "{'Wed'}\n",
+      "{'Tue', 'Mon'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "DaysA = set([\"Mon\",\"Tue\",\"Wed\"])\n",
+    "DaysB = set([\"Wed\",\"Thu\",\"Fri\",\"Sat\",\"Sun\"])\n",
+    "print(DaysA|DaysB)\t\t# equals with print(DaysA.union(DaysB))\n",
+    "print(DaysA & DaysB)\t# equals with print(DaysA.intersection(DaysB))\n",
+    "print(DaysA - DaysB)\t\t# equals with print(DaysA.difference(DaysB))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Using List of Tuples"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'id': 12458, 'name': 'Paul', 'department': 'House Floor'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "employee_list = [(12345, \"John\", \"Kitchen\"), (12458, \"Paul\", \"House Floor\")]\n",
+    "\n",
+    "def get_employee(id):\n",
+    "    for employee in employee_list:\n",
+    "        if employee[0] == id:\n",
+    "            return {\"id\": employee[0], \"name\": employee[1], \"department\": employee[2]}\n",
+    "\n",
+    "print(get_employee(12458))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Using Dictionary"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'id': '12458', 'name': 'Paul', 'department': 'House Floor'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "employee_dict = {\n",
+    "    12345: {\n",
+    "        \"id\": \"12345\",\n",
+    "        \"name\": \"John\", \n",
+    "        \"department\": \"Kitchen\"    \n",
+    "    },\n",
+    "    12458: {\n",
+    "        \"id\": \"12458\",\n",
+    "        \"name\": \"Paul\", \n",
+    "        \"department\": \"House Floor\"    \n",
+    "    }\n",
+    "}\n",
+    "\n",
+    "def get_employee_from_dict(id):\n",
+    "    return employee_dict[id];\n",
+    "\n",
+    "\n",
+    "print(get_employee_from_dict(12458));"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
