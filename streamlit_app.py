@@ -1,7 +1,7 @@
 # streamlit_calculator.py
 
 import streamlit as st
-from math_operation.py impor *
+from math_operation.py import *
 
 
 
