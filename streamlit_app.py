@@ -3,9 +3,6 @@
 import streamlit as st
 from math_operations import *
 
-
-
-
 st.title("Simple Calculator")
 
 x = st.number_input("Enter the first number:")
